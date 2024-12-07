@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>EMP_ORG</display-name>
+   <!-- Welcome file, typically points to the home page -->
+    <welcome-file-list>
+        <welcome-file>Main.html</welcome-file>
+    </welcome-file-list>
+
+    <!-- Servlet for handling Insert Operation (Create Employee) -->
+    <servlet>
+        <servlet-name>InsertServlet</servlet-name>
+        <servlet-class>project.InsertServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>InsertServlet</servlet-name>
+        <url-pattern>/InsertServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- Servlet for handling Retrieve Operation (Retrieve Employees) -->
+    <servlet>
+        <servlet-name>RetrieveServlet</servlet-name>
+        <servlet-class>project.RetrieveServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RetrieveServlet</servlet-name>
+        <url-pattern>/RetrieveServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- Servlet for handling Update Operation (Update Employee) -->
+    <servlet>
+        <servlet-name>UpdateServlet</servlet-name>
+        <servlet-class>project.UpdateServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UpdateServlet</servlet-name>
+        <url-pattern>/UpdateServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- Servlet for handling Delete Operation (Delete Employee) -->
+    <servlet>
+        <servlet-name>DeleteServlet</servlet-name>
+        <servlet-class>project.DeleteServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteServlet</servlet-name>
+        <url-pattern>/DeleteServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- Optional servlet for handling exit -->
+    <servlet>
+        <servlet-name>ExitServlet</servlet-name>
+        <servlet-class>project.ExitServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ExitServlet</servlet-name>
+        <url-pattern>/exit</url-pattern>
+    </servlet-mapping>
+</web-app>
